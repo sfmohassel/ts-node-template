@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-/* eslint-disable @typescript-eslint/no-var-requires */
 const { execSync } = require('child_process')
-const { readFileSync, writeFileSync } = require('fs')
-import { join } from 'path'
+const { readFileSync, writeFileSync, mkdirSync } = require('fs')
+const { join } = require('path')
 
 // TODO update these strings when you change their correspoding files
 const files = {
@@ -139,13 +138,6 @@ async function install() {
 
   const commands = [
     [
-      'Init',
-      () => true,
-      async () => {
-        return runCommand('npm run init -y')
-      },
-    ],
-    [
       'Install dependencies',
       () => true,
       async () => {
@@ -194,6 +186,15 @@ async function install() {
         return true
       },
     ],
+    [
+      'Create src/index.ts',
+      () => true,
+      async () => {
+        mkdirSync(join(workingDir, 'src'))
+        writeFileSync(join(workingDir, 'src', 'index.ts'), "console.log('hi')")
+        return true
+      },
+    ],
   ]
 
   for (let i = 0; i < commands.length; i++) {
@@ -210,6 +211,9 @@ async function install() {
   }
 
   console.log("Congratulations! You're typescript app is ready.")
+  console.log("run `npm run start:dev` and a live-reload app will be running")
 }
 
-await install()
+install().then(async () => {
+  console.log('Finished.')
+})
