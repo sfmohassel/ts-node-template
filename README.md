@@ -20,3 +20,12 @@ A simple ts-node template with prettier, nvmrc, eslint and nodemon.
 npm init -y
 npx @saeidjoker/ts-node-template@latest
 ```
+
+After that, you can test your app with this command
+```bash
+npm run start:dev
+```
+
+This will print `hi` on the console. You can change the contents of `src/index.ts` and save the file and the app will cold-reload :-)
+
+Enjoy!
