@@ -18,7 +18,6 @@
         "project": ["./tsconfig.json"]
       },
       "rules": {
-        "no-unused-vars": "error",
         "no-const-assign": "error",
         "prefer-const": [
           "warn",
@@ -63,15 +62,7 @@
             }
           }
         ],
-        "@typescript-eslint/no-unused-vars": [
-          "error",
-          {
-            "vars": "local",
-            "args": "none",
-            "ignoreRestSiblings": true,
-            "caughtErrors": "none"
-          }
-        ],
+        "@typescript-eslint/no-unused-vars": ["error"],
         "@typescript-eslint/no-var-requires": "warn"
       }
     }
