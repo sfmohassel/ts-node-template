@@ -1,6 +1,8 @@
 # ts-node-template
 
-A simple ts-node template with prettier, nvmrc, eslint and nodemon.
+![Screenshot 2022-07-18 234510](https://user-images.githubusercontent.com/20520614/179624179-9867b5d9-fd28-4304-8042-c99a5d8d953c.png)
+
+A simple npx template for typescript node applications with prettier, nvmrc, eslint and nodemon.
 
 ## Features
 
