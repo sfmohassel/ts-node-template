@@ -142,7 +142,7 @@ async function install() {
       () => true,
       async () => {
         return runCommand(
-          'npm i -D @types/node typescript ts-node nodemon rimraf eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-prettier',
+          'npm i -D @types/node typescript ts-node nodemon rimraf prettier eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-config-prettier eslint-plugin-prettier',
         )
       },
     ],
