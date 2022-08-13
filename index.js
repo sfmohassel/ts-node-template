@@ -26,7 +26,7 @@ const files = {
         "project": ["./tsconfig.json"]
       },
       "rules": {
-        "no-unused-vars": "error",
+        "no-unused-vars": "off",
         "no-const-assign": "error",
         "prefer-const": [
           "warn",
@@ -38,6 +38,7 @@ const files = {
         "no-unexpected-multiline": "error",
         "no-var": "warn",
         "no-useless-constructor": "off",
+        "no-empty-function": ["error", { "allow": ["constructors"] }],
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -80,7 +81,8 @@ const files = {
             "caughtErrors": "none"
           }
         ],
-        "@typescript-eslint/no-var-requires": "warn"
+        "@typescript-eslint/no-var-requires": "warn",
+        "@typescript-eslint/no-empty-function": ["error", { "allow": ["constructors"] }]
       }
     }
   ]

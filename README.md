@@ -13,6 +13,10 @@ A simple npx template for typescript node applications with prettier, nvmrc, esl
 - Example .gitignore
 - Live reloading with nodemon
 
+## Publish
+
+- Update package.json version
+- npm publish --registry https://registry.npmjs.org --access=public
 
 ## Usage
 
